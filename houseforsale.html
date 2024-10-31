@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="houseforsale.css">
+    <title>Houses for Sale - WEBUY Houses</title>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Homepage.html">Home</a>
+            <a href="houseforsale.html">Houses for sale</a>
+            <a href="sellhouse.html">Sell Your House</a>
+            <a href="calculator.html">Calculator</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="login.html">Create an account</a>
+
+        </nav>
+    </header>
+
+    <main>
+        <h1>Houses for Sale</h1>
+        <p>Explore our listings of available properties in South Africa.</p>
+        <div class="property-grid">
+            <div class="property-item">
+                <h3>3 Bedroom House in Bassonia</h3>
+                <a href="property1.html">
+                    <img src="bass1.png" alt="House 1" class="property-image">
+                </a>
+                <p>Price: R2,999,999</p>
+                
+            </div>
+            <div class="property-item">
+                <h3>6 Bedroom House in Winchester</h3>
+                <img src="house2.png" alt="House 2" class="property-image">
+                <p>Price: R3,500,000</p>
+            </div>
+            <div class="property-item">
+                <h3>4 Bedroom House in Winchester Hills</h3>
+                <img src="win4.png" alt="House 3" class="property-image">
+                <p>Price: R1,700,000</p>
+            </div>
+            <div class="property-item">
+                <h3>4 Bedroom House in Pretoria</h3>
+                <img src="pre1.png" alt="House 4" class="property-image">
+                <p>Price: R1,530,000</p>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact Us via:</p>
+        <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
+        <br>
+        <a href="https://www.facebook.com" target="_blank">FACEBOOK</a>
+        <br>
+        <a href="https://www.whatsapp.com" target="_blank">WHATSAPP</a>
+    </footer>
+
+    <script>
+        // JavaScript to handle dropdown menu click events
+        document.querySelectorAll('.dropdown-toggle').forEach(item => {
+            item.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default anchor click behavior
+                const dropdown = this.nextElementSibling; // Get the next sibling (the dropdown)
+                dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block'; // Toggle display
+            });
+        });
+
+        // Optional: Close dropdown if clicking outside of it
+        window.addEventListener('click', function(event) {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(dropdown => {
+                if (!dropdown.previousElementSibling.contains(event.target) && !dropdown.contains(event.target)) {
+                    dropdown.style.display = 'none'; // Close dropdown
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
